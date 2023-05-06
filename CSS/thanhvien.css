@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+.container h1,h3{
+    text-align: center;
+}
+
+.huy{
+    width: 40%;
+    height: 100px;
+    float: right;
+}
+
+.nguyen{
+    width: 40%;
+    height: 100px;
+    float: left;
+}
+
+.huy img{
+    width: 200px;
+    height: 300px;
+}
+
+.nguyen img{
+    width: 200px;
+    height: 300px;
+    margin-left: 350px;
+}
+
+.nguyen p{
+    margin-left: 350px;
+}
