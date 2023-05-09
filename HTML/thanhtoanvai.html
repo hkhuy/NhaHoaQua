@@ -6,7 +6,6 @@
         <title>Trang thanh toán</title>
         <link rel="stylesheet" type="text/css" href="../CSS/thanhtoan.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" type="image/logo" href="../../../image/logo/icon.PNG">
     <body>
         <div class="Container">
             <div class="indexstyle">
@@ -20,7 +19,7 @@
                 </div>
                 <div class="sanpham">
                     <div class="gia">
-                        <p><strong>59.000VNĐ</strong></p>
+                        <p><strong id="giatien">59.000VNĐ</strong></p>
                     </div>
                     <div class="buttons_added">
                         <input class="minus is-form" id="giam" type="button" value="-" onclick="giam()";>
@@ -28,15 +27,15 @@
                         <input class="plus is-form" id="tang" type="button" value="+" onclick="tang()";>
                     </div>
                     <div class="add">
-                        <p id="giohang"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG</p>
+                        <button id="giohang"><i class="fa fa-shopping-cart"></i>THÊM GIỎ HÀNG</button>
                         <p id="mucyeuthich"><i class="fa fa-heart"></i>MỤC YÊU THÍCH</p>
                     </div>
                     <div class="muangay">MUA NGAY</div>
                 </div>
                 <div class="banquyen">
                     <div class="thongtin">
-                        <p>Tên sản phẩm: <font color="#088A08">Vải nhập khẩu</font></p>
-                        <p>Xuất xứ: <font color="#088A08">Mỹ</font></p>
+                        <p>Tên sản phẩm: <span id="tensp">Vải nhập khẩu</span></p>
+                        <p>Xuất xứ: <span id="xuatxu">Mỹ</span></p>
                         <div class="rating">
                             <img src="../img/star.png" >
                             <img src="../img/star.png" >
@@ -62,5 +61,26 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById("giohang").addEventListener("click", function() {
+                window.location.href="giohang.html";
+            });
+            var i = 1;
+            function giam() {
+                if(i <= 50 && i > 1)
+                {
+                    i--;
+                    document.getElementById('so_luong').value = i;
+                }
+            }
+            function tang() {
+                if(i >= 1 && i < 50)
+                {
+                    i++;
+                    document.getElementById('so_luong').value = i;
+                }
+            }
+        </script>
+        <script src="../JS/giohang.js"></script>
     </body>
 </html>

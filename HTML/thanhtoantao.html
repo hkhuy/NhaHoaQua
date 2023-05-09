@@ -59,5 +59,24 @@
                 </div>
             </div>
         </div>
+        <script>
+            var i = 1;
+            documdocum.write('so_luong').value = i;
+            function giam() {
+                if(i <= 50 && i > 1)
+                {
+                    i--;
+                    document.getElementById('so_luong').value = i;
+                }
+            }
+            function tang() {
+                if(i >= 1 && i < 50)
+                {
+                    i++;
+                    document.getElementById('so_luong').value = i;
+                }
+            }
+            
+        </script>
     </body>
 </html>

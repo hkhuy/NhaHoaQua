@@ -16,7 +16,7 @@ btnLogin.addEventListener("click", (e) => {
       user.password === inputPassword.value
     ) {
       alert("Đăng Nhập Thành Công");
-      const newLocal = "after_Login.html";
+      const newLocal = "user.html";
       window.location.href = newLocal;
     } else {
       alert("Đăng Nhập Thất Bại");
